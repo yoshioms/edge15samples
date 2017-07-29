@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+         :root {
+            --accent-color: lightgreen;
+            --text-padding: 10px 15px 20px 10px;
+            --full-width: 300px;
+        }
+        
+        div {
+            --accent-color: yellow;
+        }
+        
+        .box-full {
+            display: block;
+            width: var(--full-width);
+            padding: var(--text-padding);
+            background-color: var(--accent-color);
+        }
+
+        .box {
+            position: absolute;
+        }
+
+        .box1 {
+            width: calc(var(--full-width) / 3);
+            left: calc(var(--full-width) / 3 * 1);
+            background-color: pink;
+        }
+        
+        .box2 {
+            width: calc(var(--full-width) / 3);
+            left: calc(var(--full-width) / 3 * 2);
+            background-color: green;
+        }
+    </style>
+
+    <script>
+        document.documentElement.style.setProperty('--accent-color', 'red');
+    </script>
+</head>
+
+<body>
+    <div class="box-full">Full</div>
+    <span class="box-full">Full Span</span>
+    <div id="boxes">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+    </div>
+</body>
+
+</html>

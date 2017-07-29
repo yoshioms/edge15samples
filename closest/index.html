@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<body>
+<article id="article1">
+  <div id="div-1"></div>
+</article>
+<article id="article2">
+  <div id="div-2"></div>
+</article>
+<article id="article3">
+  <div id="div-3" class="branch">
+    <div id="div-3-1"></div>
+  </div>
+</article>
+<script>
+// article12が取得される
+var div_1 = document.getElementById('div-1');
+var article1 = div_1.closest("article");  
+console.log(article1);
+
+// article2が取得される
+var div_2 = document.getElementById('div-2');
+var article2 = div_2.closest("article");  
+console.log(article2);
+
+var div_3 = document.getElementById('div-3');
+var branch = div_3.closest("div.branch");  
+console.log(branch);
+</script>
+</body>
+</html>

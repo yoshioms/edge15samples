@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+    Async
+<script>
+async function asyncFunc(url) {
+    console.log("asyncFunc Start");
+
+     console.log("First Start");
+     await wait2Sec();
+     console.log("First End");
+
+     console.log("Second Start");
+     await wait2Sec();
+     console.log("Second End");
+
+    console.log("asyncFunc End");
+}
+
+function wait2Sec() {
+    return new Promise(resolve => setTimeout(() => resolve(), 2000));
+}
+
+asyncFunc();
+console.log("asyncFunc Called");
+</script>
+</body>
+</html>
